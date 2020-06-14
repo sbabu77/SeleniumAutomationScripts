@@ -1,0 +1,42 @@
+package interviewQuestions;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+// Difference ways of passing Enter Key in Text box
+
+public class DifferenceWaysOfPassEnterKeys {
+
+	public static void main(String[] args) throws AWTException {
+	
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\tsure\\Selenium\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.google.co.in/");
+		WebElement searchbox = driver.findElement(By.name("q"));
+		//method 1
+		//searchbox.sendKeys("selenium interview questions"+Keys.ENTER);
+		
+		//method 2
+		//searchbox.sendKeys("selenium interview questions \n");
+		
+		//method 3
+		//searchbox.sendKeys("selenium interview questions");
+		//searchbox.submit();
+		
+		//method 4
+		searchbox.sendKeys("selenium interview questions");
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		
+	}
+
+}
