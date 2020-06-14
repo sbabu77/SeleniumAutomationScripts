@@ -1,2 +1,2 @@
 # SeleniumAutomationScripts
-Selenium Automation Scripts Codes
+Selenium Automation Scripts Code
