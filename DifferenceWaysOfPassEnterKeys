@@ -20,17 +20,17 @@ public class DifferenceWaysOfPassEnterKeys {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.google.co.in/");
 		WebElement searchbox = driver.findElement(By.name("q"));
-		//method 1
+		//method 1 - Keys.Enter option
 		//searchbox.sendKeys("selenium interview questions"+Keys.ENTER);
 		
-		//method 2
+		//method 2 - \n option
 		//searchbox.sendKeys("selenium interview questions \n");
 		
-		//method 3
+		//method 3 - Submit method
 		//searchbox.sendKeys("selenium interview questions");
 		//searchbox.submit();
 		
-		//method 4
+		//method 4 using Robot class
 		searchbox.sendKeys("selenium interview questions");
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
