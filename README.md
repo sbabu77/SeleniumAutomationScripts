@@ -1,4 +1,9 @@
 # SeleniumAutomationScripts
+WebDriver  documentation - http://seleniumhq.org/docs/
+
+WebDriver  Package details -http://selenium.googlecode.com/svn/trunk/docs/api/java/index.html
+
+
 package param;
 
 import java.io.File;
